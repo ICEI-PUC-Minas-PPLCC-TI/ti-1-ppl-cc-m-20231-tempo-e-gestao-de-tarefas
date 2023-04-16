@@ -4,12 +4,12 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 
 ## Alunos integrantes da equipe
 
-* Matheus Rodrigues
-* Rodrigo Drummond
-* Thom
-* Vinicius
-* Vitoria
-* Pedro Gaioso
+* Nome integrante
+* Nome integrante
+* Nome integrante
+* Nome integrante
+* Nome integrante
+* Nome integrante
 
 ## Professores responsáveis
 
