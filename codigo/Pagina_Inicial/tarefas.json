@@ -1,0 +1,42 @@
+[
+  {
+    "Id":0,
+    "Nome":"Festa de aniversário",
+    "Prioridade":2,
+    "Descricao":"Festa de aniversário do joaozinho mto legal!!!",
+    "cor":"Vermelho",
+    "Duedate":"15/06/23"
+  },
+  {
+    "Id":1,
+    "Nome":"Rolezinho meio da semana",
+    "Prioridade":1,
+    "Descricao":"Role no meio da semana pq sim",
+    "cor":"Azul",
+    "Duedate":"30/05/23"
+  },
+  {
+    "Id":2,
+    "Nome":"Cineminha",
+    "Prioridade":2,
+    "Descricao":"Assistir barbie de terno bora!!",
+    "cor":"Verde",
+    "Duedate":"2/06/23"
+  },
+  {
+    "Id":3,
+    "Nome":"Almoço de familia",
+    "Prioridade":3,
+    "Descricao":"Na casa do tio Felipe :(",
+    "cor":"Amarelo",
+    "Duedate":"25/06/23"
+  },
+  {
+    "Id":4,
+    "Nome":"Dentista",
+    "Prioridade":3,
+    "Descricao":"Deixar os dente bonito né",
+    "cor":"Roxo",
+    "Duedate":"25/06/23"
+  }
+]
