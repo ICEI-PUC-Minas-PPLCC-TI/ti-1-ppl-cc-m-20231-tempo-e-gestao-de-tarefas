@@ -5,9 +5,7 @@ Problemas com Tempo e Gestão de Tarefas. Falta de organização e dificuldade d
 
 ## Alunos integrantes da equipe
 
-* Fernando Valle Gusmão
 * Gabriela Lacerda Muniz
-* Luccas Feres
 * Marina Almeida Campidelli
 * Rafael Peixoto
 
