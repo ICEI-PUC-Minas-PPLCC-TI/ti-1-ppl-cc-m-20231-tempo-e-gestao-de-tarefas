@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Gerenciador de Eventos</title>
+  <style>
+    /* CSS  da página */
+    /* Por algum motivo quando fiz o css separado n tava funcionando direito ent mantive ele no index.html pra ficar mais parecido com como o riginal seria */
+    body { 
+      font-family: Arial, sans-serif; 
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    select,
+    input[type="date"] {
+      width: 300px;
+      padding: 5px;
+    }
+
+    .row {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    .row label,
+    .row input,
+    .row select {
+      margin-right: 10px;
+    }
+
+    .color-options {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    .color-options label {
+      margin-right: 10px;
+    }
+
+    .color-box {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      border: 1px solid #1d1d1d;
+    }
+
+    .actions {
+      margin-top: 20px;
+    }
+
+    .actions button {
+      margin-right: 10px;
+    } 
+  </style> 
+
+</head>
+
+<body>
+  <h1 class="eventos">Eventos</h1>
+
+  <form id="taskForm">
+    <div class="row">
+      <label for="taskName">Rotina:</label>
+      <input type="text" id="taskName" required>
+      <label for="repetir">Repetir:</label>
+          <div>
+            <input
+              type="checkbox"
+              id="repetir"
+              name="repetir"
+              value="segunda" />
+            <label for="repetir">Segunda</label>
+            <input
+              type="checkbox"
+              id="repetir"
+              name="repetir"
+              value="terca" />
+            <label for="repetir">Terça</label>
+            <input
+              type="checkbox"
+              id="repetir"
+              name="repetir"
+              value="quarta" />
+            <label for="repetir">Quarta</label>
+            <input
+              type="checkbox"
+              id="repetir"
+              name="repetir"
+              value="quinta" />
+            <label for="repetir">Quinta</label>
+            <input
+              type="checkbox"
+              id="repetir"
+              name="repetir"
+              value="sexta" />
+            <label for="repetir">Sexta</label>
+            <input
+              type="checkbox"
+              id="repetir"
+              name="repetir"
+              value="sabado" />
+            <label for="repetir">Sábado</label>
+            <input
+              type="checkbox"
+              id="repetir"
+              name="repetir"
+              value="domingo" />
+            <label for="repetir">Domingo</label>
+          </div>
+    </div>
+
+    <div class="row">
+      <label for="dueDate">Data:</label>
+      <input type="date" id="dueDate" required>
+    </div>
+
+    <div class="row">
+      <label for="category">Descrição:</label>
+      <input type="text" id="category" required>
+    </div>
+
+    <div class="row">
+      <label for="place">Local:</label>
+      <input type="text" id="place" required>
+    </div>
+
+    <div class="row">
+      <label for="time">Horario:</label>
+      <input type="text" id="time" required>
+    </div>
+
+    <div class="row">
+      <label for="color">Cor:</label>
+      <div class="color-options">
+        <label>
+          <input type="radio" name="color" value="red">
+          <span class="color-box" style="background-color: red;"></span>
+        </label>
+        <label>
+          <input type="radio" name="color" value="blue">
+          <span class="color-box" style="background-color: blue;"></span>
+        </label>
+        <label>
+          <input type="radio" name="color" value="green">
+          <span class="color-box" style="background-color: green;"></span>
+        </label>
+        <label>
+          <input type="radio" name="color" value="yellow">
+          <span class="color-box" style="background-color: yellow;"></span>
+        </label>
+        <label>
+          <input type="radio" name="color" value="purple">
+          <span class="color-box" style="background-color: purple;"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="btn" type="button" onclick="saveTask()">Salvar</button>
+      <button type="button" onclick="clearForm()">Limpar</button>
+      <button type="button" onclick="cancelForm()">Cancelar</button>
+    </div>
+  </form>
+  <script src='script.js'></script>
+</body>
+
+</html>

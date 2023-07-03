@@ -1,0 +1,54 @@
+[
+  
+  {
+    "Id": 0,
+    "Nome": "Aula de AEDs",
+    "Repetir": "Segundas, Quartas",
+    "Categoria": "Aulas",
+    "Horário": "10:40 - 12:20",
+    "Local": "Predio 4 - Sala 703",
+    "Observações": ".",
+    "cor": "Amarelo"
+  },
+  {
+    "Id": 1,
+    "Nome": "Aula de Tênis",
+    "Repetir": "Segundas, Quartas",
+    "Categoria": "Atividade Física",
+    "Horário": "17:00 - 18:30",
+    "Local": "Minas II - Quadra 5",
+    "Observações": "Levar roupa pra tomar banho quando sair da aula",
+    "cor": "Verde"
+  },
+  {
+    "Id": 2,
+    "Nome": "Aula de Culinária",
+    "Repetir": "Sexta",
+    "Categoria": "Lazer",
+    "Horário": "19:00 - 21:00",
+    "Local": "Predio ED.SeiláDasQuantas - Sala 1105",
+    "Observações": "Levar Caderno de Anotações, Avental e Touca",
+    "cor": "Azul"
+  },
+  {
+    "Id": 3,
+    "Nome": "Academia",
+    "Repetir": "Terça, Quinta, Sexta",
+    "Categoria": "Atividade Física",
+    "Horário": "15:00 - 16:00",
+    "Local": "Smart Fit",
+    "Observações": "Terça: ficha A // Quinta: ficha B // Sexta: Cardio",
+    "cor": "Verde"
+  },
+  {
+    "Id": 4,
+    "Nome": "Reunião de Célula",
+    "Repetir": "Quarta",
+    "Categoria": "Igreja",
+    "Horário": "19:30 - 21:30",
+    "Local": "Casa da Vivi",
+    "Observações": "Não esquecer de levar lanche",
+    "cor": "Roxo"
+  }
+
+]
