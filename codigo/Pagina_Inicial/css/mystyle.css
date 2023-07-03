@@ -4,12 +4,11 @@ div{
 
 }
 
-  
 .center{
     text-align: center;
 }
-.rotina{
-    height: 40vh;
+.tamanho{
+    height: 82vh;
     white-space: wrap;
     overflow: hidden;
     text-overflow: ellipsis

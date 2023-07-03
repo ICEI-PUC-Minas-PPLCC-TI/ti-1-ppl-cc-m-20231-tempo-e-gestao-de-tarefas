@@ -39,7 +39,7 @@
                             <span>Eventos</span>
                         </div>
                     </a>
-                    <a href="../Cadatro_Rotinas/rotinascadatro.html">
+                    <a href="../Cadastro_Rotinas/rotinascadastro.html">
                         <div class="icon">
                             <img src="./img/routines-icon.png" alt="Ícone de Rotinas">
                             <span>Rotinas</span>
@@ -47,22 +47,56 @@
                     </a>
                 </header>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="border rounded">
-                        <div class="rotina m-2 rounded border p-1">
-                            <h6>Tarefa 1</h6>
-                            <div class="p-1">
-                                <p>&nbsp Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            </div>
-                        </div>
-                        <div class="rotina m-2 rounded border p-1">
-                            <h6>Tarefa 2</h6>
-                            <div class="p-1">
-                                <p>&nbsp Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="row tamanho">
+                <div class="col-md-6 rounded border p-2" id="rotinas">
+                        <script type="module">
+                            console.log(localStorage.getItem("tasks"))
+                            let dataa = JSON.parse(localStorage.getItem("tasks"))
+                            let rotinas = dataa;
+                            let telarotinas = document.getElementById('rotinas');
+                            let strHtmlrotinas = '';
+                            let size = rotinas.length;
+                            for (let i=0; i< size; i++){
+                                
+                                if(rotinas[i].Color=="red"){
+                                    strHtmlrotinas += `<div class="border rounded m-1 tarefa p-1" style="background-color:lightcoral;">
+                                        <small class="m-1"><b>${rotinas[i].Nome} </b>${rotinas[i].Time}</small><br>
+                                    <small class="m-1"><b>Dias:</b>${rotinas[i].Repetir}</small><br>
+                                    <small class="m-1"><b>Local:</b>${rotinas[i].Place}</small><br>
+                                    <small class="m-1">${rotinas[i].Descricao}</small><br>
+                                </div>`;
+                                }else if(rotinas[i].Color=="blue"){
+                                    strHtmlrotinas += `<div class="border rounded m-1 tarefa p-1" style="background-color:DeepSkyBlue;">
+                                    <small class="m-1"><b>${rotinas[i].Nome} </b>${rotinas[i].Time}</small><br>
+                                    <small class="m-1"><b>Dias:</b>${rotinas[i].Repetir}</small><br>
+                                    <small class="m-1"><b>Local:</b>${rotinas[i].Place}</small><br>
+                                    <small class="m-1">${rotinas[i].Descricao}</small><br>
+                                </div>`;
+                                }else if(rotinas[i].Color=="green"){
+                                    strHtmlrotinas += `<div class="border rounded m-1 tarefa p-1" style="background-color:DarkSeaGreen;">
+                                    <small class="m-1"><b>${rotinas[i].Nome} </b>${rotinas[i].Time}</small><br>
+                                    <small class="m-1"><b>Dias:</b>${rotinas[i].Repetir}</small><br>
+                                    <small class="m-1"><b>Local:</b>${rotinas[i].Place}</small><br>
+                                    <small class="m-1">${rotinas[i].Descricao}</small><br>
+                                </div>`;
+                                }else if(rotinas[i].Color=="yellow"){
+                                    strHtmlrotinas += `<div class="border rounded m-1 tarefa p-1" style="background-color:Khaki;">
+                                    <small class="m-1"><b>${rotinas[i].Nome} </b>${rotinas[i].Time}</small><br>
+                                    <small class="m-1"><b>Dias:</b>${rotinas[i].Repetir}</small><br>
+                                    <small class="m-1"><b>Local:</b>${rotinas[i].Place}</small><br>
+                                    <small class="m-1">${rotinas[i].Descricao}</small><br>
+                                </div>`;
+                                }else if(rotinas[i].Color=="purple"){
+                                    strHtmlrotinas += `<div class="border rounded m-1 tarefa p-1" style="background-color:MediumOrchid;">
+                                    <small class="m-1"><b>${rotinas[i].Nome} </b>${rotinas[i].Time}</small><br>
+                                    <small class="m-1"><b>Dias:</b>${rotinas[i].Repetir}</small><br>
+                                    <small class="m-1"><b>Local:</b>${rotinas[i].Place}</small><br>
+                                    <small class="m-1">${rotinas[i].Descricao}</small><br>
+                                </div>`;
+                                } 
+                            }
+                            telarotinas.innerHTML= strHtmlrotinas;
+                        </script>
                 </div>
                 <div class="col-md-6 rounded border p-2" id="tarefas">
                     <script type="module">
