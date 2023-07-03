@@ -8,11 +8,25 @@ document.addEventListener("DOMContentLoaded", function() {
     const eventDetailsElement = document.querySelector(".event-details");
   
     let currentDate = new Date();
-    let events = [
-      { date: "2023-05-10", title: "Evento 1", description: "Descrição do Evento 1" },
-      { date: "2023-05-15", title: "Evento 2", description: "Descrição do Evento 2" },
-      { date: "2023-05-22", title: "Evento 3", description: "Descrição do Evento 3" }
-    ];
+    let data = JSON.parse(localStorage.getItem("tasks"))
+    let calendario = data;
+    let l = calendario.length;
+    let events = "[";
+    let temp = '';
+    
+    for (let i=0; i< l; i++){
+      if(i == l-1){
+        temp = `{"date": "${calendario[i].Duedate}","title": "${calendario[i].Nome}","Descricao": "${calendario[i].Descricao}"}`;
+      }else{
+       temp = `{"date": "${calendario[i].Duedate}","title": "${calendario[i].Nome}","Descricao": "${calendario[i].Descricao}"},`;
+      }
+      events += temp;
+      console.log(temp)
+    }
+    events += "]"
+    events = JSON.parse(events)
+
+    
   
     prevButton.addEventListener("click", function() {
       currentDate.setMonth(currentDate.getMonth() - 1);

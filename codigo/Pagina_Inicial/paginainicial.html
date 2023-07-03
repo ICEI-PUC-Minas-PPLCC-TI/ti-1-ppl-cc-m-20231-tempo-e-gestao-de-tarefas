@@ -50,7 +50,6 @@
             <div class="row tamanho">
                 <div class="col-md-6 rounded border p-2" id="rotinas">
                         <script type="module">
-                            console.log(localStorage.getItem("tasks"))
                             let dataa = JSON.parse(localStorage.getItem("tasks"))
                             let rotinas = dataa;
                             let telarotinas = document.getElementById('rotinas');
@@ -100,7 +99,6 @@
                 </div>
                 <div class="col-md-6 rounded border p-2" id="tarefas">
                     <script type="module">
-                        console.log(localStorage.getItem("tasks"))
                         let data = JSON.parse(localStorage.getItem("tasks"))
                         let tarefas = data;
                         let telatarefas = document.getElementById('tarefas');
@@ -191,7 +189,6 @@
                                         let strHtmlEventos = '';
 
                                         for (let i=0; i< eventos.length; i++){
-                                            console.log(eventos)
                                             if(eventos[i].Cor=="red"){
                                                 strHtmlEventos += `<div class="slide">
                                                 <div class="border rounded mx-1" style="background-color:lightcoral;">
