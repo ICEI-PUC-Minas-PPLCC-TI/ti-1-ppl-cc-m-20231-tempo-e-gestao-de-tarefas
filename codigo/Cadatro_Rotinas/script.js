@@ -49,7 +49,6 @@ function clearForm() {
   document.getElementById('taskName').value = '';
   document.getElementById('repetir').value = '';
   document.getElementById('category').value = '';
-  document.getElementById('dueDate').value = '';
   document.getElementById('place').value = '';
   document.getElementById('time').value = '';
   let colorOptions = document.querySelectorAll('input[name="color"]');
@@ -77,8 +76,6 @@ function saveTask() {
   console.log(repetir)
   let category = document.getElementById('category').value;
   console.log(category)
-  let dueDate = document.getElementById('dueDate').value;
-  console.log(dueDate)
   let place = document.getElementById('place').value;
   console.log(place)
   let time = document.getElementById('time').value;
@@ -87,7 +84,7 @@ function saveTask() {
   console.log(color)
 
   // Verificar se todos os campos foram preenchidos
-  if (!taskName || !category || !dueDate || !color || !place || !time) {
+  if (!taskName || !category || !color || !place || !time) {
     //console.log("hello there")
     window.alert('Por favor, preencha todos os campos do formulário.');
     return;
@@ -99,10 +96,9 @@ function saveTask() {
     Nome: taskName,
     Repetir: values,
     Descricao: category,
-    Duedate: dueDate,
     Place: place,
     Time: time,
-    Cor: color
+    Color: color
   }
 
   loadData(task)
@@ -118,7 +114,6 @@ function clearForm() {
   document.getElementById('taskName').value = '';
   document.getElementById('repetir').value = '';
   document.getElementById('category').value = '';
-  document.getElementById('dueDate').value = '';
   document.getElementById('place').value = '';
   document.getElementById('time').value = '';
   let colorOptions = document.querySelectorAll('input[name="color"]');
@@ -159,8 +154,7 @@ function exibirDadosNaPagina(dados) {
     html += '<p><strong>Descrição:</strong> ' + dado.Descricao + '</p>';
     html += '<p><strong>Horario:</strong> ' + dado.Time + '</p>';
     html += '<p><strong>Local:</strong> ' + dado.Place + '</p>';
-    html += '<p><strong>Cor:</strong> ' + dado.Cor + '</p>';
-    html += '<p><strong>Data:</strong> ' + dado.Duedate + '</p>';
+    html += '<p><strong>Cor:</strong> ' + dado.Color + '</p>';
     html += '<hr>';
   });
 
