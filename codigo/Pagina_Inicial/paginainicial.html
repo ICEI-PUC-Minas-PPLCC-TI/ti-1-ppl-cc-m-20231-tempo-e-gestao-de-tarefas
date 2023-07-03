@@ -65,9 +65,7 @@
                 <div class="col-md-6 rounded border p-2" id="tarefas">
                     <script type="module">
                         let data = JSON.parse(localStorage.getItem("tasks"))
-                        console.log(data)
                         let tarefas = data;
-                        console.log(tarefas[0].cor)
                         let telatarefas = document.getElementById('tarefas');
                         let strHtmlTarefas = '';
                         let l = tarefas.length;
@@ -150,50 +148,56 @@
                                 <div id="slider-container" class="slider">
                                     <script type="module">
                                         
-                                        import data from './json/eventos.json' assert { type: 'json' };
-                                        let eventos = data;
+                                        let info = JSON.parse(localStorage.getItem("tasks"))
+                                        let eventos = info;
                                         let tela = document.getElementById('slider-container');
                                         let strHtmlEventos = '';
 
                                         for (let i=0; i< eventos.length; i++){
-                                            if(eventos[i].cor=="Vermelho"){
+                                            console.log(eventos)
+                                            if(eventos[i].Cor=="red"){
                                                 strHtmlEventos += `<div class="slide">
                                                 <div class="border rounded mx-1" style="background-color:lightcoral;">
                                                     <small class="m-1"><b>Nome:</b>${eventos[i].Nome}</small><br>
                                                     <small class="m-1"><b>Descrição:</b> ${eventos[i].Descricao}</small><br>
-                                                    <small class="m-1"><b>Data:</b> ${eventos[i].Duedate}</small>
+                                                    <small class="m-1"><b>Data:</b> ${eventos[i].Duedate}</small><br>
+                                                    <small class="m-1"><b>Prioridade:</b> ${eventos[i].Prioridade}</small>
                                                 </div>
                                             </div>`;
-                                            }else if(eventos[i].cor=="Azul"){
+                                            }else if(eventos[i].Cor=="blue"){
                                                 strHtmlEventos += `<div class="slide">
                                                 <div class="border rounded mx-1" style="background-color:DeepSkyBlue;">
                                                     <small class="m-1"><b>Nome:</b>${eventos[i].Nome}</small><br>
                                                     <small class="m-1"><b>Descrição:</b> ${eventos[i].Descricao}</small><br>
-                                                    <small class="m-1"><b>Data:</b> ${eventos[i].Duedate}</small>
+                                                    <small class="m-1"><b>Data:</b> ${eventos[i].Duedate}</small><br>
+                                                    <small class="m-1"><b>Prioridade:</b> ${eventos[i].Prioridade}</small>
                                                 </div>
                                             </div>`;
-                                            }else if(eventos[i].cor=="Verde"){
+                                            }else if(eventos[i].Cor=="green"){
                                                 strHtmlEventos += `<div class="slide">
                                                 <div class="border rounded mx-1" style="background-color:DarkSeaGreen;">
                                                     <small class="m-1"><b>Nome:</b>${eventos[i].Nome}</small><br>
                                                     <small class="m-1"><b>Descrição:</b> ${eventos[i].Descricao}</small><br>
-                                                    <small class="m-1"><b>Data:</b> ${eventos[i].Duedate}</small>
+                                                    <small class="m-1"><b>Data:</b> ${eventos[i].Duedate}</small><br>
+                                                    <small class="m-1"><b>Prioridade:</b> ${eventos[i].Prioridade}</small>
                                                 </div>
                                             </div>`;
-                                            }else if(eventos[i].cor=="Amarelo"){
+                                            }else if(eventos[i].Cor=="yellow"){
                                                 strHtmlEventos += `<div class="slide">
                                                 <div class="border rounded mx-1" style="background-color:Khaki;">
                                                     <small class="m-1"><b>Nome:</b>${eventos[i].Nome}</small><br>
                                                     <small class="m-1"><b>Descrição:</b> ${eventos[i].Descricao}</small><br>
-                                                    <small class="m-1"><b>Data:</b> ${eventos[i].Duedate}</small>
+                                                    <small class="m-1"><b>Data:</b> ${eventos[i].Duedate}</small><br>
+                                                    <small class="m-1"><b>Prioridade:</b> ${eventos[i].Prioridade}</small>
                                                 </div>
                                             </div>`;
-                                            }else if(eventos[i].cor=="Roxo"){
+                                            }else if(eventos[i].Cor=="purple"){
                                                 strHtmlEventos += `<div class="slide">
                                                 <div class="border rounded mx-1" style="background-color:MediumOrchid;">
                                                     <small class="m-1"><b>Nome:</b>${eventos[i].Nome}</small><br>
                                                     <small class="m-1"><b>Descrição:</b> ${eventos[i].Descricao}</small><br>
-                                                    <small class="m-1"><b>Data:</b> ${eventos[i].Duedate}</small>
+                                                    <small class="m-1"><b>Data:</b> ${eventos[i].Duedate}</small><br>
+                                                    <small class="m-1"><b>Prioridade:</b> ${eventos[i].Prioridade}</small>
                                                 </div>
                                             </div>`;
                                             }
