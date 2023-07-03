@@ -98,7 +98,7 @@ function saveTask() {
 
   window.alert('Tarefa salva com sucesso!');
 
-  window.location.href = "exibir_dados.html";
+  window.location.href = "../Pagina_Inicial/paginainicial.html";
 
 };
 
