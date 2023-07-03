@@ -64,6 +64,7 @@
                 </div>
                 <div class="col-md-6 rounded border p-2" id="tarefas">
                     <script type="module">
+                        console.log(localStorage.getItem("tasks"))
                         let data = JSON.parse(localStorage.getItem("tasks"))
                         let tarefas = data;
                         let telatarefas = document.getElementById('tarefas');
