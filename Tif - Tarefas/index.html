@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gerenciador de Tarefas</title>
+  <style>
+    /* Estilos CSS para a página */
+    body { 
+      font-family: Arial, sans-serif; 
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    select,
+    input[type="date"] {
+      width: 300px;
+      padding: 5px;
+    }
+
+    .row {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    .row label,
+    .row input,
+    .row select {
+      margin-right: 10px;
+    }
+
+    .color-options {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    .color-options label {
+      margin-right: 10px;
+    }
+
+    .color-box {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      border: 1px solid #000;
+    }
+
+    .actions {
+      margin-top: 20px;
+    }
+
+    .actions button {
+      margin-right: 10px;
+    } 
+  </style> 
+</head>
+<body> 
+  <h1>Gerenciador de Tarefas</h1>
+  
+  <form id="taskForm">
+    <div class="row">
+      <label for="taskName">Descrição da Tarefa:</label>
+      <input type="text" id="taskName" required>
+      <label for="priority">Prioridade:</label>
+      <select id="priority" required>
+        <option value="alta">Alta</option>
+        <option value="média">Média</option>
+        <option value="baixa">Baixa</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label for="dueDate">Data de Entrega:</label>
+      <input type="date" id="dueDate" required>
+    </div>
+
+    <div class="row">
+      <label for="category">Categoria:</label>
+      <input type="text" id="category" required>
+    </div>
+
+    <div class="row">
+      <label for="color">Cor:</label>
+      <div class="color-options">
+        <label>
+          <input type="radio" name="color" value="red">
+          <span class="color-box" style="background-color: red;"></span>
+        </label>
+        <label>
+          <input type="radio" name="color" value="blue">
+          <span class="color-box" style="background-color: blue;"></span>
+        </label>
+        <label>
+          <input type="radio" name="color" value="green">
+          <span class="color-box" style="background-color: green;"></span>
+        </label>
+        <label>
+          <input type="radio" name="color" value="yellow">
+          <span class="color-box" style="background-color: yellow;"></span>
+        </label>
+        <label>
+          <input type="radio" name="color" value="purple">
+          <span class="color-box" style="background-color: purple;"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button type="button" onclick="saveTask()">Salvar</button>
+      <button type="button" onclick="clearForm()">Limpar</button>
+      <button type="button" onclick="cancelForm()">Cancelar</button>
+    </div>
+  </form>
+  <script src='script.js'></script>
+</body>
+</html>
