@@ -18,3 +18,13 @@ function edicao_rotina(id){
     let url = "../Edicao_de_rotinas/index.html?id="+id;
     window.location.href = url;
 }
+
+function edicao_tarefas(id){
+    let url = "../Edicao_de_tarefas/index.html?id="+id;
+    window.location.href = url;
+}
+
+function edicao_eventos(id){
+    let url = "../Edicao_de_eventos/index.html?id="+id;
+    window.location.href = url;
+}

@@ -113,27 +113,27 @@
                         for (let i=0; i< l; i++){
                             
                             if(tarefas[i].cor=="red"){
-                                strHtmlTarefas += `<div class="border rounded m-1 tarefa p-1" style="background-color:lightcoral;">
+                                strHtmlTarefas += `<div class="border rounded m-1 tarefa p-1" onclick="edicao_tarefas(${i})" style="background-color:lightcoral;">
                                 <small class="m-1"><b>${tarefas[i].Nome} </b>${tarefas[i].Duedate}</small><br>
                                 <small class="m-1">${tarefas[i].Descricao}</small><br>
                             </div>`;
                             }else if(tarefas[i].cor=="blue"){
-                                strHtmlTarefas += `<div class="border rounded m-1 tarefa p-1" style="background-color:DeepSkyBlue;">
+                                strHtmlTarefas += `<div class="border rounded m-1 tarefa p-1" onclick="edicao_tarefas(${i})" style="background-color:DeepSkyBlue;">
                                 <small class="m-1"><b>${tarefas[i].Nome} </b>${tarefas[i].Duedate}</small><br>
                                 <small class="m-1">${tarefas[i].Descricao}</small><br>
                             </div>`;
                             }else if(tarefas[i].cor=="green"){
-                                strHtmlTarefas += `<div class="border rounded m-1 tarefa p-1" style="background-color:DarkSeaGreen;">
+                                strHtmlTarefas += `<div class="border rounded m-1 tarefa p-1" onclick="edicao_tarefas(${i})" style="background-color:DarkSeaGreen;">
                                 <small class="m-1"><b>${tarefas[i].Nome} </b>${tarefas[i].Duedate}</small><br>
                                 <small class="m-1">${tarefas[i].Descricao}</small><br>
                             </div>`;
                             }else if(tarefas[i].cor=="yellow"){
-                                strHtmlTarefas += `<div class="border rounded m-1 tarefa p-1" style="background-color:Khaki;">
+                                strHtmlTarefas += `<div class="border rounded m-1 tarefa p-1" onclick="edicao_tarefas(${i})" style="background-color:Khaki;">
                                 <small class="m-1"><b>${tarefas[i].Nome} </b>${tarefas[i].Duedate}</small><br>
                                 <small class="m-1">${tarefas[i].Descricao}</small><br>
                             </div>`;
                             }else if(tarefas[i].cor=="purple"){
-                                strHtmlTarefas += `<div class="border rounded m-1 tarefa p-1" style="background-color:MediumOrchid;">
+                                strHtmlTarefas += `<div class="border rounded m-1 tarefa p-1" onclick="edicao_tarefas(${i})" style="background-color:MediumOrchid;">
                                 <small class="m-1"><b>${tarefas[i].Nome} </b>${tarefas[i].Duedate}</small><br>
                                 <small class="m-1">${tarefas[i].Descricao}</small><br>
                             </div>`;
@@ -197,7 +197,7 @@
                                         for (let i=0; i< eventos.length; i++){
                                             if(eventos[i].Cor=="red"){
                                                 strHtmlEventos += `<div class="slide">
-                                                <div class="border rounded mx-1" style="background-color:lightcoral;">
+                                                <div class="border rounded mx-1" onclick="edicao_eventos(${i})" style="background-color:lightcoral;">
                                                     <small class="m-1"><b>Nome:</b>${eventos[i].Nome}</small><br>
                                                     <small class="m-1"><b>Descrição:</b> ${eventos[i].Descricao}</small><br>
                                                     <small class="m-1"><b>Data:</b> ${eventos[i].Duedate}</small><br>
@@ -206,7 +206,7 @@
                                             </div>`;
                                             }else if(eventos[i].Cor=="blue"){
                                                 strHtmlEventos += `<div class="slide">
-                                                <div class="border rounded mx-1" style="background-color:DeepSkyBlue;">
+                                                <div class="border rounded mx-1" onclick="edicao_eventos(${i})" style="background-color:DeepSkyBlue;">
                                                     <small class="m-1"><b>Nome:</b>${eventos[i].Nome}</small><br>
                                                     <small class="m-1"><b>Descrição:</b> ${eventos[i].Descricao}</small><br>
                                                     <small class="m-1"><b>Data:</b> ${eventos[i].Duedate}</small><br>
@@ -215,7 +215,7 @@
                                             </div>`;
                                             }else if(eventos[i].Cor=="green"){
                                                 strHtmlEventos += `<div class="slide">
-                                                <div class="border rounded mx-1" style="background-color:DarkSeaGreen;">
+                                                <div class="border rounded mx-1" onclick="edicao_eventos(${i})" style="background-color:DarkSeaGreen;">
                                                     <small class="m-1"><b>Nome:</b>${eventos[i].Nome}</small><br>
                                                     <small class="m-1"><b>Descrição:</b> ${eventos[i].Descricao}</small><br>
                                                     <small class="m-1"><b>Data:</b> ${eventos[i].Duedate}</small><br>
@@ -224,7 +224,7 @@
                                             </div>`;
                                             }else if(eventos[i].Cor=="yellow"){
                                                 strHtmlEventos += `<div class="slide">
-                                                <div class="border rounded mx-1" style="background-color:Khaki;">
+                                                <div class="border rounded mx-1" onclick="edicao_eventos(${i})" style="background-color:Khaki;">
                                                     <small class="m-1"><b>Nome:</b>${eventos[i].Nome}</small><br>
                                                     <small class="m-1"><b>Descrição:</b> ${eventos[i].Descricao}</small><br>
                                                     <small class="m-1"><b>Data:</b> ${eventos[i].Duedate}</small><br>
@@ -233,7 +233,7 @@
                                             </div>`;
                                             }else if(eventos[i].Cor=="purple"){
                                                 strHtmlEventos += `<div class="slide">
-                                                <div class="border rounded mx-1" style="background-color:MediumOrchid;">
+                                                <div class="border rounded mx-1" onclick="edicao_eventos(${i})" style="background-color:MediumOrchid;">
                                                     <small class="m-1"><b>Nome:</b>${eventos[i].Nome}</small><br>
                                                     <small class="m-1"><b>Descrição:</b> ${eventos[i].Descricao}</small><br>
                                                     <small class="m-1"><b>Data:</b> ${eventos[i].Duedate}</small><br>
