@@ -6,6 +6,10 @@ if (!events) {
   events = JSON.parse(events);
 }
 
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const id = urlParams.get('id');
+
 // Obtém os elementos do formulário
 const eventForm = document.getElementById('event-form');
 const eventColorInput = document.getElementById('event-color');
@@ -17,6 +21,7 @@ const eventNotesInput = document.getElementById('event-notes');
 const eventTitle = document.getElementById('event-title');
 const eventTextColorInput = document.getElementById('event-text-color');
 const eventTitleInput = document.getElementById('event-title-input');
+const eventPriority = document.getElementById('event-priority')
 
 // Adiciona o evento de alteração do campo de título
 eventTitleInput.addEventListener('input', function() {
@@ -30,39 +35,22 @@ eventColorInput.addEventListener('input', function() {
     eventTitle.style.backgroundColor = color;
   });
 
-  // Adiciona o evento de alteração do campo de cor da letra
-eventTextColorInput.addEventListener('input', function() {
-    const textColor = eventTextColorInput.value;
-    eventTitle.style.color = textColor;
-  });
-
 // Adiciona o evento de envio do formulário
 eventForm.addEventListener('submit', function(event) {
   event.preventDefault();
 
-  // Cria um novo objeto de evento com base nos valores do formulário
-  const newEvent = {
-    color: eventColorInput.value,
-    date: eventDateInput.value,
-    time: eventTimeInput.value,
-    description: eventDescriptionInput.value,
-    location: eventLocationInput.value,
-    notes: eventNotesInput.value
-  };
+  let info = JSON.parse(localStorage.getItem("tasks"))
+  let eventos = info;
 
-  // Adiciona o novo evento à lista de eventos
-  events.push(newEvent);
+  eventos[id].Nome = eventTitleInput.value;
+  eventos[id].Cor = "red";
+  eventos[id].Prioridade = eventPriority.value;
+  eventos[id].Duedate = eventDateInput.value;
+  eventos[id].Descricao = eventDescriptionInput.value;
 
   // Salva a lista de eventos atualizada no local storage
-  localStorage.setItem('events', JSON.stringify(events));
+  localStorage["tasks"] = JSON.stringify(eventos);
 
-  // Limpa os campos do formulário
-  eventColorInput.value = '';
-  eventDateInput.value = '';
-  eventTimeInput.value = '';
-  eventDescriptionInput.value = '';
-  eventLocationInput.value = '';
-  eventNotesInput.value = '';
 
   alert('Evento salvo com sucesso!');
 });
