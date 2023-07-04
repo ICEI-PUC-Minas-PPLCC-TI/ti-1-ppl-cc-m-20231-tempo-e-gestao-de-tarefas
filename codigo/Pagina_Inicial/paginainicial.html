@@ -61,38 +61,38 @@
                             let telarotinas = document.getElementById('rotinas');
                             let strHtmlrotinas = '';
                             let size = rotinas.length;
-                            for (let i=0; i< size; i++){
-                                
+                            for (let i=0; i< size; i++){ 
+                                   
                                 if(rotinas[i].Color=="red"){
-                                    strHtmlrotinas += `<div class="border rounded m-1 tarefa p-1" style="background-color:lightcoral;">
-                                        <small class="m-1"><b>${rotinas[i].Nome} </b>${rotinas[i].Time}</small><br>
+                                    strHtmlrotinas += `<div class="border rounded m-1 tarefa p-1" onclick="edicao_rotina(${i})" style="background-color:lightcoral;">
+                                    <small class="m-1"><b>${rotinas[i].Nome} </b>${rotinas[i].Time}</small><br>
                                     <small class="m-1"><b>Dias:</b>${rotinas[i].Repetir}</small><br>
                                     <small class="m-1"><b>Local:</b>${rotinas[i].Place}</small><br>
                                     <small class="m-1">${rotinas[i].Descricao}</small><br>
                                 </div>`;
                                 }else if(rotinas[i].Color=="blue"){
-                                    strHtmlrotinas += `<div class="border rounded m-1 tarefa p-1" style="background-color:DeepSkyBlue;">
+                                    strHtmlrotinas += `<div class="border rounded m-1 tarefa p-1" onclick="edicao_rotina(${i})" style="background-color:DeepSkyBlue;">
                                     <small class="m-1"><b>${rotinas[i].Nome} </b>${rotinas[i].Time}</small><br>
                                     <small class="m-1"><b>Dias:</b>${rotinas[i].Repetir}</small><br>
                                     <small class="m-1"><b>Local:</b>${rotinas[i].Place}</small><br>
                                     <small class="m-1">${rotinas[i].Descricao}</small><br>
                                 </div>`;
                                 }else if(rotinas[i].Color=="green"){
-                                    strHtmlrotinas += `<div class="border rounded m-1 tarefa p-1" style="background-color:DarkSeaGreen;">
+                                    strHtmlrotinas += `<div class="border rounded m-1 tarefa p-1" onclick="edicao_rotina(${i})" style="background-color:DarkSeaGreen;">
                                     <small class="m-1"><b>${rotinas[i].Nome} </b>${rotinas[i].Time}</small><br>
                                     <small class="m-1"><b>Dias:</b>${rotinas[i].Repetir}</small><br>
                                     <small class="m-1"><b>Local:</b>${rotinas[i].Place}</small><br>
                                     <small class="m-1">${rotinas[i].Descricao}</small><br>
                                 </div>`;
                                 }else if(rotinas[i].Color=="yellow"){
-                                    strHtmlrotinas += `<div class="border rounded m-1 tarefa p-1" style="background-color:Khaki;">
+                                    strHtmlrotinas += `<div class="border rounded m-1 tarefa p-1" onclick="edicao_rotina(${i})" style="background-color:Khaki;">
                                     <small class="m-1"><b>${rotinas[i].Nome} </b>${rotinas[i].Time}</small><br>
                                     <small class="m-1"><b>Dias:</b>${rotinas[i].Repetir}</small><br>
                                     <small class="m-1"><b>Local:</b>${rotinas[i].Place}</small><br>
                                     <small class="m-1">${rotinas[i].Descricao}</small><br>
                                 </div>`;
                                 }else if(rotinas[i].Color=="purple"){
-                                    strHtmlrotinas += `<div class="border rounded m-1 tarefa p-1" style="background-color:MediumOrchid;">
+                                    strHtmlrotinas += `<div class="border rounded m-1 tarefa p-1" onclick="edicao_rotina(${i})" style="background-color:MediumOrchid;">
                                     <small class="m-1"><b>${rotinas[i].Nome} </b>${rotinas[i].Time}</small><br>
                                     <small class="m-1"><b>Dias:</b>${rotinas[i].Repetir}</small><br>
                                     <small class="m-1"><b>Local:</b>${rotinas[i].Place}</small><br>

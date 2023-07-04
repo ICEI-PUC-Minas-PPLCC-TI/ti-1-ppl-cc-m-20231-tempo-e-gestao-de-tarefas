@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Editar Rotina</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1 id="event-title">Editar Rotina</h1>
+  <div class="card">
+    <div class="card-content">
+      <form id="event-form">
+        <div class="card">
+          <div class="card-content">
+            <label for="event-title-input">Título:</label>
+            <input type="text" id="event-title-input">
+          </div>
+        </div>
+       
+        <div class="card">
+        <div class="card-content">
+            <label>Dias:</label>
+            <div class="weekdays-container">
+              <div class="weekday">
+                <label for="sunday-checkbox">Dom</label>
+                <input type="checkbox" id="sunday-checkbox">
+              </div>
+              <div class="weekday">
+                <label for="monday-checkbox">Seg</label>
+                <input type="checkbox" id="monday-checkbox">
+              </div>
+              <div class="weekday">
+                <label for="tuesday-checkbox">Ter</label>
+                <input type="checkbox" id="tuesday-checkbox">
+              </div>
+              <div class="weekday">
+                <label for="wednesday-checkbox">Qua</label>
+                <input type="checkbox" id="wednesday-checkbox">
+              </div>
+              <div class="weekday">
+                <label for="thursday-checkbox">Qui</label>
+                <input type="checkbox" id="thursday-checkbox">
+              </div>
+              <div class="weekday">
+                <label for="friday-checkbox">Sex</label>
+                <input type="checkbox" id="friday-checkbox">
+              </div>
+              <div class="weekday">
+                <label for="saturday-checkbox">Sáb</label>
+                <input type="checkbox" id="saturday-checkbox">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+              <label for="event-color">Cor do Evento:</label>
+              <input type="color" id="event-color">
+            </div>
+          </div>
+  
+          <div class="card">
+            <div class="card-content">
+              <label for="event-text-color">Cor da Letra:</label>
+              <input type="color" id="event-text-color">
+            </div>
+          </div>
+
+        <div class="card">
+          <div class="card-content">
+            <label for="event-date">Data:</label>
+            <input type="date" id="event-date">
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <label for="event-time">Horário:</label>
+            <input type="time" id="event-time">
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <label for="event-description">Descrição:</label>
+            <input type="text" id="event-description">
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <label for="event-location">Local:</label>
+            <input type="text" id="event-location">
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <label for="event-notes">Observações:</label>
+            <textarea id="event-notes"></textarea>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <input type="submit" value="Salvar">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
