@@ -51,6 +51,6 @@ eventForm.addEventListener('submit', function(event) {
   localStorage["tasks"] = JSON.stringify(eventos);
 
 
-  alert('Evento salvo com sucesso!');
+  window.location.href = "../Pagina_Inicial/paginainicial.html";
 });
 

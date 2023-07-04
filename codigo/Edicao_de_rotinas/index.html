@@ -19,35 +19,22 @@
         <div class="card">
         <div class="card-content">
             <label>Dias:</label>
-            <div class="weekdays-container">
-              <div class="weekday">
-                <label for="sunday-checkbox">Dom</label>
-                <input type="checkbox" id="sunday-checkbox">
-              </div>
-              <div class="weekday">
-                <label for="monday-checkbox">Seg</label>
-                <input type="checkbox" id="monday-checkbox">
-              </div>
-              <div class="weekday">
-                <label for="tuesday-checkbox">Ter</label>
-                <input type="checkbox" id="tuesday-checkbox">
-              </div>
-              <div class="weekday">
-                <label for="wednesday-checkbox">Qua</label>
-                <input type="checkbox" id="wednesday-checkbox">
-              </div>
-              <div class="weekday">
-                <label for="thursday-checkbox">Qui</label>
-                <input type="checkbox" id="thursday-checkbox">
-              </div>
-              <div class="weekday">
-                <label for="friday-checkbox">Sex</label>
-                <input type="checkbox" id="friday-checkbox">
-              </div>
-              <div class="weekday">
-                <label for="saturday-checkbox">Sáb</label>
-                <input type="checkbox" id="saturday-checkbox">
-              </div>
+            <div class="row days">
+              <input type="checkbox" id="repetir" name="repetir" value="segunda" />
+              <label for="repetir">Segunda</label>
+              <input type="checkbox" id="repetir" name="repetir" value="terca" />
+              <label for="repetir">Terça</label>
+              <input type="checkbox" id="repetir" name="repetir" value="quarta" />
+              <label for="repetir">Quarta</label>
+              <input type="checkbox" id="repetir" name="repetir" value="quinta" />
+              <label for="repetir">Quinta</label>
+              <input type="checkbox" id="repetir" name="repetir" value="sexta" />
+              <label for="repetir">Sexta</label>
+              <input type="checkbox" id="repetir" name="repetir" value="sabado" />
+              <label for="repetir">Sábado</label>
+              <input type="checkbox" id="repetir" name="repetir" value="domingo" />
+              <label for="repetir">Domingo</label>
+        
             </div>
           </div>
         </div>
@@ -55,7 +42,27 @@
         <div class="card">
             <div class="card-content">
               <label for="event-color">Cor da Rotina:</label>
-              <input type="color" id="event-color">
+              <div class="color-options">
+                <label>
+                  <input type="radio" name="color" value="red">
+                  <span class="color-box" style="background-color: red;"></span>
+                </label>
+                <label>
+                  <input type="radio" name="color" value="blue">
+                  <span class="color-box" style="background-color: blue;"> </span>
+                </label>
+                <label>
+                  <input type="radio" name="color" value="green">
+                  <span class="color-box" style="background-color: green;"></span>
+                </label>
+                <label>
+                  <input type="radio" name="color" value="yellow">
+                  <span class="color-box" style="background-color: yellow;"></span>
+                </label>
+                <label>
+                  <input type="radio" name="color" value="purple">
+                  <span class="color-box" style="background-color: purple;"></span>
+                </label>
             </div>
           </div>
 
