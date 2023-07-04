@@ -26,3 +26,9 @@ body {
     margin-top: 10px;
   }
   
+  .color-box {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border: 1px solid #000;
+  }
