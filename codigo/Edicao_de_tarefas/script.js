@@ -12,7 +12,7 @@ const id = urlParams.get('id');
 
 // Obtém os elementos do formulário
 const eventForm = document.getElementById('event-form');
-const eventColorInput = document.getElementById('event-color');
+
 const eventDateInput = document.getElementById('event-date');
 const eventTimeInput = document.getElementById('event-time');
 const eventDescriptionInput = document.getElementById('event-description');
@@ -29,21 +29,15 @@ eventTitleInput.addEventListener('input', function() {
     eventTitle.textContent = title;
   });
 
-// Adiciona o evento de alteração do campo de cor do evento
-eventColorInput.addEventListener('input', function() {
-    const color = eventColorInput.value;
-    eventTitle.style.backgroundColor = color;
-  });
-
 // Adiciona o evento de envio do formulário
 eventForm.addEventListener('submit', function(event) {
   event.preventDefault();
-
+  const eventColorInput = document.querySelector('input[name="color"]:checked')?.value;
   let info = JSON.parse(localStorage.getItem("tasks"))
   let eventos = info;
 
   eventos[id].Nome = eventTitleInput.value;
-  eventos[id].Cor = "red";
+  eventos[id].cor = eventColorInput;
   eventos[id].Prioridade = eventPriority.value;
   eventos[id].Duedate = eventDateInput.value;
   eventos[id].Descricao = eventDescriptionInput.value;
