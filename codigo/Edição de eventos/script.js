@@ -16,12 +16,23 @@ const eventLocationInput = document.getElementById('event-location');
 const eventNotesInput = document.getElementById('event-notes');
 const eventTitle = document.getElementById('event-title');
 const eventTextColorInput = document.getElementById('event-text-color');
+const eventTitleInput = document.getElementById('event-title-input');
 
-// Adiciona o evento de alteração do campo de cor
+// Adiciona o evento de alteração do campo de título
+eventTitleInput.addEventListener('input', function() {
+  const title = eventTitleInput.value;
+  eventTitle.textContent = title;
+});
+
+// Adiciona o evento de alteração do campo de cor do evento
 eventColorInput.addEventListener('input', function() {
   const color = eventColorInput.value;
-  const textColor = eventTextColorInput.value;
   eventTitle.style.backgroundColor = color;
+});
+
+// Adiciona o evento de alteração do campo de cor da letra
+eventTextColorInput.addEventListener('input', function() {
+  const textColor = eventTextColorInput.value;
   eventTitle.style.color = textColor;
 });
 
