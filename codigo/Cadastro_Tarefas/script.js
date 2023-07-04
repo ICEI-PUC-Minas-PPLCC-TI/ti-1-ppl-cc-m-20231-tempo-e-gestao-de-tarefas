@@ -68,7 +68,7 @@ function saveTask() {
   console.log(dueDate)
   let color = document.querySelector('input[name="color"]:checked')?.value;
   console.log(color)
-
+  
   // Verificar se todos os campos foram preenchidos
   if (!taskName || !priority || !category || !dueDate || !color) {
     console.log("hello there")

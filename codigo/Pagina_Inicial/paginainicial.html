@@ -59,7 +59,7 @@
                             let dataa = JSON.parse(localStorage.getItem("tasks"))
                             let rotinas = dataa;
                             let telarotinas = document.getElementById('rotinas');
-                            let strHtmlrotinas = '';
+                            let strHtmlrotinas = '<small class="p-2">Rotinas</small>';
                             let size = rotinas.length;
                             for (let i=0; i< size; i++){ 
                                    
@@ -108,7 +108,7 @@
                         let data = JSON.parse(localStorage.getItem("tasks"))
                         let tarefas = data;
                         let telatarefas = document.getElementById('tarefas');
-                        let strHtmlTarefas = '';
+                        let strHtmlTarefas = '<small class="p-2">Tarefas</small>';
                         let l = tarefas.length;
                         for (let i=0; i< l; i++){
                             
